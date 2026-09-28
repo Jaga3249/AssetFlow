@@ -1,36 +1,10 @@
-// import { defineConfig } from "eslint/config";
-// import { FlatCompat } from "@eslint/eslintrc";
-
-// const compat = new FlatCompat({
-//   baseDirectory: import.meta.dirname,
-// });
-
-// export default defineConfig([
-//   ...compat.extends("next/core-web-vitals", "next/typescript"),
-
-//   {
-//     rules: {
-//       "max-lines": [
-//         "warn",
-//         {
-//           max: 150,
-//           skipBlankLines: true,
-//           skipComments: true,
-//         },
-//       ],
-//     },
-//   },
-// ]);
-
-import { defineConfig } from "eslint/config";
-import { FlatCompat } from "@eslint/eslintrc";
-
-const compat = new FlatCompat({
-  baseDirectory: import.meta.dirname,
-});
+import { defineConfig, globalIgnores } from "eslint/config";
+import nextVitals from "eslint-config-next/core-web-vitals";
+import nextTs from "eslint-config-next/typescript";
 
 export default defineConfig([
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  ...nextVitals,
+  ...nextTs,
 
   {
     rules: {
@@ -42,4 +16,6 @@ export default defineConfig([
       ],
     },
   },
+
+  globalIgnores([".next/**", "out/**", "build/**", "next-env.d.ts"]),
 ]);
