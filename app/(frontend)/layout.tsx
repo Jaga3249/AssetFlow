@@ -1,7 +1,7 @@
 import "@mantine/core/styles.css";
 import { mantineHtmlProps } from "@mantine/core";
 import { RootLayout } from "@/components/root-layout/root-layout";
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (

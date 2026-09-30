@@ -1,4 +1,5 @@
 import { Text } from "@mantine/core";
-
-export const Dashboard = () => <Text>Dashboard</Text>;
+function Dashboard() {
+  return <Text>HII</Text>;
+}
 export default Dashboard;
