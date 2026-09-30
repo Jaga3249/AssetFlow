@@ -1,6 +1,5 @@
-// src/theme/theme.ts
-
 import { createTheme, rem } from "@mantine/core";
+import { defaultComponents } from "./components";
 
 export const theme = createTheme({
   /* --------------------------------
@@ -130,57 +129,5 @@ export const theme = createTheme({
     lg: "0 8px 24px rgba(0, 0, 0, 0.10)",
     xl: "0 12px 32px rgba(0, 0, 0, 0.12)",
   },
-
-  /* --------------------------------
-   * Component Defaults
-   * -------------------------------- */
-
-  components: {
-    Button: {
-      defaultProps: {
-        size: "sm",
-        radius: "md",
-      },
-    },
-
-    Input: {
-      defaultProps: {
-        size: "sm",
-        radius: "md",
-      },
-    },
-
-    TextInput: {
-      defaultProps: {
-        size: "sm",
-        radius: "md",
-      },
-    },
-
-    Select: {
-      defaultProps: {
-        size: "sm",
-        radius: "md",
-      },
-    },
-
-    Textarea: {
-      defaultProps: {
-        size: "sm",
-        radius: "md",
-      },
-    },
-
-    Card: {
-      defaultProps: {
-        radius: "lg",
-      },
-    },
-
-    Badge: {
-      defaultProps: {
-        radius: "sm",
-      },
-    },
-  },
+  components: defaultComponents,
 });
