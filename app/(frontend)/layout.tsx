@@ -1,4 +1,5 @@
 import "@mantine/core/styles.css";
+import "@mantine/dates/styles.css";
 import { mantineHtmlProps } from "@mantine/core";
 import { RootLayout } from "@/components/root-layout/root-layout";
 import { ReactNode } from "react";
