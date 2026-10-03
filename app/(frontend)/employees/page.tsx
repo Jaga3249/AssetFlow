@@ -1,4 +1,1 @@
-import { Text } from "@mantine/core";
-
-const Emplyoees = () => <Text>Employees</Text>;
-export default Emplyoees;
+export { EmployeeList as default } from "@/views/empoyees/employee-list";
