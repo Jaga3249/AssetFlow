@@ -1,22 +1,26 @@
-// import bundleAnalyzer from '@next/bundle-analyzer';
-
-// const withBundleAnalyzer = bundleAnalyzer({
-//   enabled: process.env.ANALYZE === 'true',
-// });
-
-// export default withBundleAnalyzer({
-//   reactStrictMode: false,
-//   experimental: {
-//     optimizePackageImports: ['@mantine/core', '@mantine/hooks'],
-//   },
-// });
-
 import bundleAnalyzer from "@next/bundle-analyzer";
+import createNextIntlPlugin from "next-intl/plugin";
+
+const withNextIntl = createNextIntlPlugin();
 
 const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === "true",
 });
 
-export default withBundleAnalyzer({
+const nextConfig = {
   reactStrictMode: false,
-});
+  optimizePackageImports: ["@mantine/core", "@mantine/hooks"],
+};
+
+export default withNextIntl(withBundleAnalyzer(nextConfig));
+
+// import createNextIntlPlugin from "next-intl/plugin";
+
+// const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
+
+// const nextConfig = {
+//   reactStrictMode: false,
+//   optimizePackageImports: ["@mantine/core", "@mantine/hooks"],
+// };
+
+// export default withNextIntl(nextConfig);
