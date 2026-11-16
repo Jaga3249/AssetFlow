@@ -8,22 +8,27 @@
     "build": "next build",
     "analyze": "ANALYZE=true next build",
     "start": "next start",
-    "typecheck": "tsc --noEmit",
+    "check-type": "tsc --noEmit",
     "stylelint": "stylelint '**/*.css' --cache",
     "format:test": "oxfmt -c oxfmt.config.mjs --check \"**/*.{ts,tsx,css}\"",
     "format:write": "oxfmt -c oxfmt.config.mjs --write \"**/*.{ts,tsx,css}\""
   },
   "dependencies": {
     "@mantine/core": "9.6.0",
+    "@mantine/dates": "^9.6.0",
+    "@mantine/form": "^9.6.0",
     "@mantine/hooks": "9.6.0",
     "@next/bundle-analyzer": "^16.0.0",
     "@supabase/ssr": "^0.12.7",
     "@supabase/supabase-js": "^2.117.2",
     "@tabler/icons-react": "^3.35.0",
+    "dayjs": "^1.11.23",
+    "mantine-form-zod-resolver": "^1.3.0",
     "next": "16.3.6",
+    "next-intl": "^4.14.9",
     "react": "19.3.0",
     "react-dom": "19.3.0",
-    "swr": "^2.5.1"
+    "zod": "^4.6.5"
   },
   "devDependencies": {
     "@babel/core": "^8.0.0",
